@@ -69,6 +69,25 @@ const projects = [
     color: "#6366F1",
     emoji: "🤖",
   },
+  {
+    title: "MentorXI",
+    subtitle: "Mentorship Platform",
+    desc: "A mentorship platform connecting mentors with mentees, facilitating knowledge sharing and professional growth through structured guidance.",
+    link: "https://mentorxi.app",
+    tags: ["Mentorship", "Platform", "Web App"],
+    color: "#10B981",
+    emoji: "🧑‍🏫",
+  },
+  {
+    title: "Visitor Management System",
+    subtitle: "Security & Access Control",
+    desc: "A comprehensive visitor management system with a resident mobile app and security portal for tracking, managing, and controlling visitor access.",
+    link: "https://github.com/GladysAyebia/VMS-Resident-Mobile-App",
+    github: ["https://github.com/GladysAyebia/VMS-Resident-Mobile-App", "https://github.com/GladysAyebia/vms-security-portal"],
+    tags: ["Mobile", "Security", "Access Control", "Full Stack"],
+    color: "#0EA5E9",
+    emoji: "🛡️",
+  },
 ];
 
 export default function Projects() {
@@ -152,17 +171,34 @@ export default function Projects() {
                     borderColor: `${p.color}30`,
                   }}
                 >
-                  <FiExternalLink size={14} /> Live Demo
+                  <FiExternalLink size={14} /> {p.github ? "View Project" : "Live Demo"}
                 </a>
-                <a
-                  href="https://github.com/gladysayebia"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.ghBtn}
-                  aria-label="GitHub"
-                >
-                  <FiGithub size={16} />
-                </a>
+                {p.github ? (
+                  <div className={styles.ghLinks}>
+                    {p.github.map((url) => (
+                      <a
+                        key={url}
+                        href={url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.ghBtn}
+                        aria-label="GitHub"
+                      >
+                        <FiGithub size={16} />
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <a
+                    href="https://github.com/gladysayebia"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.ghBtn}
+                    aria-label="GitHub"
+                  >
+                    <FiGithub size={16} />
+                  </a>
+                )}
               </div>
 
               {/* Glow on hover */}

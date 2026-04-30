@@ -158,6 +158,11 @@
   transform: translateY(-1px);
 }
 
+.ghLinks {
+  display: flex;
+  gap: 8px;
+}
+
 /* hover glow overlay */
 .cardGlow {
   position: absolute;
