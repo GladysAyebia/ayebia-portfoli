@@ -80,7 +80,7 @@ export default function About() {
               with genuine passion.
             </p>
             <p className={styles.text}>
-              I&apos;ve won <strong>two hackathons</strong> (Devpost & Bite-Sized Market),
+              I&apos;ve won <strong>two hackathons</strong> (Devpost & Bitmark 2026 Hackathon-Edubase Challenge ),
               mentored students in STEM, and consistently delivered across frontend,
               design, and community roles. I am described by colleagues as
               <em> &quot;dedicated, creative, and full of energy.&quot;</em>
